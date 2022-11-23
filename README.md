@@ -103,6 +103,31 @@ void app_init(void) {
 }
 ```
 
+Convert quaternion to angle
+```c
+	int32_t Q1 = (int32_t)async_edata.d.async.sensorEvent.vdata.data.u32[1];
+	int32_t Q2 = (int32_t)async_edata.d.async.sensorEvent.vdata.data.u32[2];
+	int32_t Q3 = (int32_t)async_edata.d.async.sensorEvent.vdata.data.u32[3];
+    double q1 = ((double)Q1) / 1073741824.0; // Convert to double. Divide by 2^30
+    double q2 = ((double)Q2) / 1073741824.0; // Convert to double. Divide by 2^30
+    double q3 = ((double)Q3) / 1073741824.0; // Convert to double. Divide by 2^30
+    double q0 = sqrt(1.0 - ((q1 * q1) + (q2 * q2) + (q3 * q3)));
+    double q2sqr = q2 * q2;
+    // roll (x-axis rotation)
+    double t0 = +2.0 * (q0 * q1 + q2 * q3);
+    double t1 = +1.0 - 2.0 * (q1 * q1 + q2sqr);
+    double roll = atan2(t0, t1) * 180.0 / PI;
+    // pitch (y-axis rotation)
+    double t2 = +2.0 * (q0 * q2 - q3 * q1);
+    t2 = t2 > 1.0 ? 1.0 : t2;
+    t2 = t2 < -1.0 ? -1.0 : t2;
+    double pitch = asin(t2) * 180.0 / PI;
+    // yaw (z-axis rotation)
+    double t3 = +2.0 * (q0 * q3 + q1 * q2);
+    double t4 = +1.0 - 2.0 * (q2sqr + q3 * q3);
+    double yaw = atan2(t3, t4) * 180.0 / PI;
+```
+
 Port source code focuse on [sensor.c](base_project_thunderboard_mcu/sensor.c) and [system.c](base_project_thunderboard_mcu/system.c) check project for more details
 
 Update `include path`
