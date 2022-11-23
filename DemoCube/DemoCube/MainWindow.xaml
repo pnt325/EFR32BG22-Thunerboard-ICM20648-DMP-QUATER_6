@@ -1,0 +1,137 @@
+﻿<Window x:Class="DemoCube.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoCube"
+        mc:Ignorable="d"
+        Title="DemoCube" Height="500" Width="500"
+        Name="mainWindow">
+
+    <Window.DataContext>
+        <local:MainWindowViewModel x:Name="vmMainWindow"/>
+    </Window.DataContext>
+
+    <Grid Background="LightCyan">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Viewport3D Grid.Row="0">
+            <Viewport3D.Resources>
+                <MeshGeometry3D x:Key="plane1" Normals="0,-1,0 0,-1,0 0,-1,0 0,-1,0" 
+						Positions="-1,-1,1 1,-1,-1 1,-1,1 -1,-1,-1" 
+						TextureCoordinates="0,1 1,0 1,1 0,0" TriangleIndices="0 1 2 1 0 3"/>
+                <MeshGeometry3D x:Key="plane2" Normals="0,0,1 0,0,1 0,0,1 0,0,1" 
+						Positions="-1,-1,1 1,-1,1 1,1,1 -1,1,1" 
+						TextureCoordinates="0,1 1,1 1,0 0,0" TriangleIndices="0 1 2 2 3 0"/>
+                <MeshGeometry3D x:Key="plane3" Normals="0,0,-1 0,0,-1 0,0,-1 0,0,-1" 
+						Positions="-1,-1,-1 1,1,-1 1,-1,-1 -1,1,-1" 
+						TextureCoordinates="0,1 1,0 1,1 0,0" TriangleIndices="0 1 2 1 0 3"/>
+                <MeshGeometry3D x:Key="plane4" Normals="1,0,0 1,0,0 1,0,0 1,0,0" 
+						Positions="1,-1,1 1,-1,-1 1,1,-1 1,1,1" 
+						TextureCoordinates="0,1 1,1 1,0 0,0" TriangleIndices="0 1 2 2 3 0"/>
+                <MeshGeometry3D x:Key="plane5" Normals="-1,0,0 -1,0,0 -1,0,0 -1,0,0" 
+						Positions="-1,-1,1 -1,1,-1 -1,-1,-1 -1,1,1" 
+						TextureCoordinates="0,1 1,0 1,1 0,0" TriangleIndices="0 1 2 1 0 3"/>
+                <MeshGeometry3D x:Key="plane6" Normals="0,1,0 0,1,0 0,1,0 0,1,0" 
+						Positions="-1,1,1 1,1,1 1,1,-1 -1,1,-1" 
+						TextureCoordinates="0,1 1,1 1,0 0,0" TriangleIndices="0 1 2 2 3 0"/>
+                <SolidColorBrush x:Key="brush1" Color="Red"/>
+                <SolidColorBrush x:Key="brush2" Color="Blue" />
+                <SolidColorBrush x:Key="brush3" Color="Green" />
+                <SolidColorBrush x:Key="brush4" Color="Yellow" />
+                <SolidColorBrush x:Key="brush5" Color="Cyan" />
+                <SolidColorBrush x:Key="backBrush" Color="DarkGray" />
+
+            </Viewport3D.Resources>
+            <Viewport3D.Camera>
+                <PerspectiveCamera x:Name="Camera" FieldOfView="30" 
+						FarPlaneDistance="100" LookDirection="-0.9,-1,-1" 
+						NearPlaneDistance="0.1" Position="5.5,6.2,5.9" 
+						UpDirection="0,0,1"/>
+            </Viewport3D.Camera>
+
+            <ModelVisual3D x:Name="ModelVisual3D">
+                <ModelVisual3D.Transform>
+                    <Transform3DGroup>
+                        <RotateTransform3D>
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D  Axis="0,1,0" Angle="{Binding AngleX}" />
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D>
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D Axis="1,0,0" Angle="{Binding AngleY}" />
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D>
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D Axis="0,0,1" Angle="{Binding AngleZ}" />
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                    </Transform3DGroup>
+                </ModelVisual3D.Transform>
+
+                <ModelVisual3D.Content>
+                    <Model3DGroup>
+                        <DirectionalLight Color="White" Direction="0,0,1"/>
+                        <DirectionalLight Color="White" Direction="-1,0,0"/>
+                        <AmbientLight x:Name="AmbLightMain" Color="Gray"/>
+
+                        <GeometryModel3D Geometry="{StaticResource plane1}">
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="{StaticResource Jellyfish}" />
+                            </GeometryModel3D.Material>
+                        </GeometryModel3D>
+
+                        <GeometryModel3D Geometry="{StaticResource plane2}">
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="{StaticResource Chrysanthemum}" />
+                            </GeometryModel3D.Material>
+                        </GeometryModel3D>
+
+                        <GeometryModel3D Geometry="{StaticResource plane3}">
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="{StaticResource Koala}" />
+                            </GeometryModel3D.Material>
+                        </GeometryModel3D>
+
+                        <GeometryModel3D Geometry="{StaticResource plane4}">
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="{StaticResource Penguins}" />
+                            </GeometryModel3D.Material>
+                        </GeometryModel3D>
+
+                        <GeometryModel3D Geometry="{StaticResource plane5}">
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="{StaticResource Tulips}" />
+                            </GeometryModel3D.Material>
+                        </GeometryModel3D>
+
+                        <GeometryModel3D Geometry="{StaticResource plane6}">
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="{StaticResource Desert}" />
+                            </GeometryModel3D.Material>
+                        </GeometryModel3D>
+
+                    </Model3DGroup>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </Viewport3D>
+
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Left" Margin="10,10,0,-10" Grid.RowSpan="2">
+            <TextBlock Text="{Binding AngleX,StringFormat='X: {0}'}"/>
+            <TextBlock Text="{Binding AngleY,StringFormat='Y: {0}'}"/>
+            <TextBlock Text="{Binding AngleZ,StringFormat='Z: {0}'}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom" Margin="10">
+            <ComboBox x:Name="cbbPort" Margin="5" Width="93"/>
+            <Button x:Name="btnConnect" Content="Connect" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\animal.png" />
+    <Resource Include="Resources\building.png" />
+    <Resource Include="Resources\city.png" />
+    <Resource Include="Resources\clock.png" />
+    <Resource Include="Resources\iland.png" />
+    <Resource Include="Resources\tree_lake.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Build\" />
+  </ItemGroup>
+
+</Project>

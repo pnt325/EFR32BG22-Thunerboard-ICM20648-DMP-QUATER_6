@@ -1,0 +1,21 @@
+#CRC Codes for initially generated config files -- do not modify!
+SEGGER_RTT_Conf.h=1088810083
+app_assert_config.h=1351236558
+app_log_config.h=-1134478857
+dmadrv_config.h=1207334949
+emlib_core_debug_config.h=-551881347
+sl_board_control_config.h=-2050463155
+sl_device_init_dcdc_config.h=-1580606003
+sl_device_init_emu_config.h=622680131
+sl_device_init_hfxo_config.h=757721503
+sl_device_init_lfxo_config.h=1375897478
+sl_icm20648_config.h=91342063
+sl_memory_config.h=687128566
+sl_mx25_flash_shutdown_usart_config.h=-59667380
+sl_simple_button_btn0_config.h=1258821894
+sl_simple_button_config.h=362231615
+sl_simple_led_led0_config.h=-120235916
+sl_sleeptimer_config.h=-1879962229
+sl_uartdrv_usart_vcom_config.h=-2030977824
+uartdrv_config.h=-941504238
+ustimer_config.h=2106674886

@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/EMD-App/src/config",
+                "${workspaceFolder}/EMD-App/src/ICM20648",
+                "${workspaceFolder}/EMD-Core/sources/Invn/Devices",
+                "${workspaceFolder}/EMD-Core/sources/Invn/Devices/Drivers",
+                "${workspaceFolder}/EMD-Core/sources/Invn/DynamicProtocol",
+                "${workspaceFolder}/EMD-Core/sources/Invn/EmbUtils",
+                "${workspaceFolder}/EMD-Core/sources/Invn/VSensor"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "configurationProvider": "nrf-connect"
+        }
+    ],
+    "version": 4
+}

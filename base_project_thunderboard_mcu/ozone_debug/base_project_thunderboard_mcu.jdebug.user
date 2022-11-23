@@ -1,0 +1,24 @@
+
+
+Breakpoint=C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/app.c:130:2, State=BP_STATE_DISABLED
+OpenDocument="main.c", FilePath="C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/main.c", Line=3
+OpenDocument="Icm20648Setup.c", FilePath="C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/ICM20648/Invn/Devices/Drivers/Icm20648/Icm20648Setup.c", Line=728
+OpenDocument="core_cm33.h", FilePath="C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/gecko_sdk_4.1.1/platform/CMSIS/Core/Include/core_cm33.h", Line=3114
+OpenDocument="sensor.c", FilePath="C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/sensor.c", Line=422
+OpenDocument="startup_efr32bg22.c", FilePath="C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/gecko_sdk_4.1.1/platform/Device/SiliconLabs/EFR32BG22/Source/startup_efr32bg22.c", Line=324
+OpenDocument="cmsis_gcc.h", FilePath="C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/gecko_sdk_4.1.1/platform/CMSIS/Core/Include/cmsis_gcc.h", Line=935
+OpenDocument="app.c", FilePath="C:/Users/phatn/Documents/Projects/efr32/base_project_thunderboard_mcu/app.c", Line=99
+OpenToolbar="Debug", Floating=0, x=0, y=0
+OpenWindow="Call Stack", DockArea=RIGHT, x=0, y=3, w=507, h=390, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Disassembly", DockArea=RIGHT, x=0, y=0, w=507, h=219, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Memory 1", DockArea=BOTTOM, x=0, y=0, w=1232, h=163, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0, EditorAddress=0x2A0
+OpenWindow="Local Data", DockArea=RIGHT, x=0, y=2, w=507, h=409, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Watched Data 1", DockArea=RIGHT, x=0, y=1, w=507, h=279, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+OpenWindow="Functions", DockArea=LEFT, x=0, y=0, w=177, h=1300, FilterBarShown=0, TotalValueBarShown=0, ToolBarShown=0
+TableHeader="Local Data", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Location";"Size";"Type";"Scope"], ColWidths=[384;384;100;100;205;100]
+TableHeader="Functions", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Address";"Size";"#Insts";"Source"], ColWidths=[1782;100;100;100;320]
+TableHeader="Call Stack", SortCol="Function", SortOrder="ASCENDING", VisibleCols=["Function";"Stack Frame";"Source";"PC";"Return Address";"Stack Used"], ColWidths=[195;119;110;100;168;100]
+TableHeader="Power Sampling", SortCol="None", SortOrder="ASCENDING", VisibleCols=["Index";"Time";"Ch 0"], ColWidths=[100;100;100]
+TableHeader="Watched Data 1", SortCol="Expression", SortOrder="ASCENDING", VisibleCols=["Expression";"Value";"Location";"Refresh"], ColWidths=[165;189;130;100]
+TableHeader="RegisterSelectionDialog", SortCol="None", SortOrder="ASCENDING", VisibleCols=[], ColWidths=[]
+TableHeader="TargetExceptionDialog", SortCol="Name", SortOrder="ASCENDING", VisibleCols=["Name";"Value";"Address";"Description"], ColWidths=[200;100;100;340]

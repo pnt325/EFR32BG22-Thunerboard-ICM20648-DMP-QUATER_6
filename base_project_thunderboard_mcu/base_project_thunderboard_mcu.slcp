@@ -1,0 +1,53 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: base_project_thunderboard_mcu
+label: base_project_thunderboard_mcu
+description: |
+  This example project shows how to blink an LED in a bare-metal configuration.
+category: Example|Platform
+filter:
+- name: Device Type
+  value: [SoC]
+- name: MCU
+  value: [32-bit MCU]
+- name: Project Difficulty
+  value: [Beginner]
+package: platform
+quality: production
+readme:
+- {path: readme.md}
+source:
+- {path: app.c}
+- {path: main.c}
+- {path: blink.c}
+tag: ['hardware:component:led:1+']
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+  - {path: blink.h}
+sdk: {id: gecko_sdk, version: 4.1.1}
+toolchain_settings: []
+component:
+- {id: iostream_rtt}
+- {id: app_log}
+- instance: [vcom]
+  id: uartdrv_usart
+- {id: sl_system}
+- instance: [btn0]
+  id: simple_button
+- {id: imu_driver_icm20648}
+- {id: icm20648_driver}
+- instance: [led0]
+  id: simple_led
+- {id: device_init}
+- {id: brd4184b}
+- {id: app_assert}
+- {id: ustimer}
+- {id: sleeptimer}
+- {id: EFR32BG22C224F512IM40}
+define:
+- {name: DEBUG_EFM}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+

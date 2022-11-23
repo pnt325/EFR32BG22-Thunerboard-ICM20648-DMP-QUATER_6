@@ -1,0 +1,23 @@
+﻿<Application x:Class="DemoCube.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DemoCube"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ImageBrush x:Key='Chrysanthemum'
+            ImageSource='Resources/animal.png' Stretch='Fill' TileMode='FlipXY'   />
+        <ImageBrush x:Key='Desert'
+            ImageSource='Resources/city.png' Stretch='Fill' TileMode='FlipXY'   />
+        <ImageBrush x:Key='Jellyfish'
+            ImageSource='Resources/iland.png' Stretch='Fill' TileMode='FlipXY'   />
+        <ImageBrush x:Key='Koala'
+            ImageSource='Resources/clock.png' Stretch='Fill' TileMode='FlipXY'   />
+        <ImageBrush x:Key='Penguins'
+            ImageSource='Resources/building.png' Stretch='Fill' TileMode='FlipXY'   />
+        <ImageBrush x:Key='Tulips'
+            ImageSource='Resources/tree_lake.png' Stretch='Fill' TileMode='FlipXY'   />
+
+
+    </Application.Resources>
+</Application>
